@@ -1,0 +1,124 @@
+//colors
+$black-bg: #202024;
+$black-icon: #323238;
+$neutral-white: #e1e1e6;
+$neutral-gray: #c4c4cc;
+//global settings
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  text-align: center;
+
+  body {
+    width: 100%;
+    height: 100vh;
+    background-color: $black-bg;
+    -webkit-font-smoothing: antialiased;
+
+    a {
+      text-decoration: none;
+    }
+
+    ul {
+      list-style-type: none;
+    }
+  }
+}
+:root {
+  font-family: 'Roboto', sans-serif;
+  color: $neutral-white;
+}
+
+/* main */
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  height: 100%;
+
+  .profile-picture {
+    //esse position está limitando a área do span (elemento filho)
+    position: relative;
+    > span {
+      position: absolute;
+      top: -15px;
+      z-index: 2;
+    }
+    img.picture {
+      width: 16rem;
+      height: 18.4rem;
+      object-fit: cover;
+      clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+    }
+  }
+  // profile section
+  section.badge {
+    article.username {
+      margin: 2.4rem 0 3.2rem;
+
+      > h1 {
+        font-size: 2.4rem;
+        margin-bottom: 0.4rem;
+      }
+
+      .personal-github {
+        margin-bottom: 3.2rem;
+        > a {
+          width: 10.2rem;
+          height: 2.6rem;
+          margin: auto;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          > span {
+            font-size: 1.6rem;
+            margin-left: 1.2rem;
+            color: $neutral-gray;
+          }
+        }
+      }
+
+      p.description {
+        width: 26.2rem;
+        font-size: 1.4rem;
+        line-height: 2.4rem;
+      }
+    }
+
+    footer {
+      margin-top: 6.4rem;
+
+      ul.medias {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 21.6rem;
+        margin: auto;
+        li.social-media {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: $black-icon;
+          width: 4.8rem;
+          height: 4.8rem;
+        }
+      }
+    }
+  }
+}
+
+/* mobile version */
+@media (max-width: 425px) {
+  html {
+    body {
+      background: $black-bg url('../images/mobile/mobile-bg.png') no-repeat
+        fixed top;
+    }
+  }
+}

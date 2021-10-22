@@ -1,0 +1,105 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  text-align: center;
+}
+html body {
+  width: 100%;
+  height: 100vh;
+  background-color: #202024;
+  -webkit-font-smoothing: antialiased;
+}
+html body a {
+  text-decoration: none;
+}
+html body ul {
+  list-style-type: none;
+}
+
+:root {
+  font-family: "Roboto", sans-serif;
+  color: #e1e1e6;
+}
+
+/* main */
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  height: 100%;
+}
+main .profile-picture {
+  position: relative;
+}
+main .profile-picture > span {
+  position: absolute;
+  top: -15px;
+  z-index: 2;
+}
+main .profile-picture img.picture {
+  width: 16rem;
+  height: 18.4rem;
+  object-fit: cover;
+  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+}
+main section.badge article.username {
+  margin: 2.4rem 0 3.2rem;
+}
+main section.badge article.username > h1 {
+  font-size: 2.4rem;
+  margin-bottom: 0.4rem;
+}
+main section.badge article.username .personal-github {
+  margin-bottom: 3.2rem;
+}
+main section.badge article.username .personal-github > a {
+  width: 10.2rem;
+  height: 2.6rem;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main section.badge article.username .personal-github > a > span {
+  font-size: 1.6rem;
+  margin-left: 1.2rem;
+  color: #c4c4cc;
+}
+main section.badge article.username p.description {
+  width: 26.2rem;
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+}
+main section.badge footer {
+  margin-top: 6.4rem;
+}
+main section.badge footer ul.medias {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 21.6rem;
+  margin: auto;
+}
+main section.badge footer ul.medias li.social-media {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #323238;
+  width: 4.8rem;
+  height: 4.8rem;
+}
+
+/* mobile version */
+@media (max-width: 425px) {
+  html body {
+    background: #202024 url("../images/mobile/mobile-bg.png") no-repeat fixed top;
+  }
+}
+
+/*# sourceMappingURL=index.css.map */
