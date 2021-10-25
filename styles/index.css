@@ -54,6 +54,7 @@ main section.badge article.username {
 main section.badge article.username > h1 {
   font-size: 2.4rem;
   margin-bottom: 0.4rem;
+  min-height: 2.9rem;
 }
 main section.badge article.username .personal-github {
   margin-bottom: 3.2rem;
@@ -67,11 +68,15 @@ main section.badge article.username .personal-github > a {
   justify-content: center;
 }
 main section.badge article.username .personal-github > a > span {
+  display: block;
+  width: 100%;
+  height: 100%;
   font-size: 1.6rem;
   margin-left: 1.2rem;
   color: #c4c4cc;
 }
 main section.badge article.username p.description {
+  min-height: 10rem;
   width: 26.2rem;
   font-size: 1.4rem;
   line-height: 2.4rem;
